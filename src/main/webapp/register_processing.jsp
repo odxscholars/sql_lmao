@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Register Processing</title>
 </head>
 <body>
 <jsp:useBean id="A" class="assetManagement.assets" scope="session"/>

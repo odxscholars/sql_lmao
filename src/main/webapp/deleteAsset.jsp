@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Delete Asset</title>
 </head>
 <body>
     <form action = "delete_asset_processing.jsp">

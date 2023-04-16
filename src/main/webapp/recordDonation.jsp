@@ -11,7 +11,7 @@
     <title>Record Donation</title>
 </head>
 <body>
-    <form action = "record_asset_donation.jsp">
+    <form action = "record_asset_donation_processing.jsp">
         Donor Name: <input type="text" Id="donor_completename" name="donor_completename"><br>
         Donation Form File: <input type="text" Id="donation_formfile" name="donation_formfile"><br>
         Donation Date: <input type="date" Id="date_donation" name="date_donation"><br>
