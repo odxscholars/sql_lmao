@@ -25,7 +25,7 @@
                     <%}}%>
         </select>
 
-
+        <input type ="submit" value = "Dispose Asset" />
     </form>
 
 </body>

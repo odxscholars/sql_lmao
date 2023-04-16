@@ -12,10 +12,10 @@
 </head>
 <body>
     <form action="update_donation_processing.jsp">
-        <jsp:useBean id="A" class="assetManagement.assets" scope="session" />
+        <jsp:useBean id="A" class="assetManagem.a" scope="session" />
         <select id="donation_id">
             <%
-
+                int status = A.getDonations();
             %>
         </select>
     </form>

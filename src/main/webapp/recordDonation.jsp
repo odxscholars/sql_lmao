@@ -12,16 +12,30 @@
 </head>
 <body>
     <form action = "record_asset_donation_processing.jsp">
+        <jsp:useBean id="A" class="donationManagement.donations" scope="session" />
         Donor Name: <input type="text" Id="donor_completename" name="donor_completename"><br>
+        Donor Address: <input type="text" Id="address" name="address"><br>
         Donation Form File: <input type="text" Id="donation_formfile" name="donation_formfile"><br>
         Donation Date: <input type="date" Id="date_donation" name="date_donation"><br>
-        Accepted Homeowner ID: <input type="text" Id="accept_hoid" name="accept_hoid"><br>
-        Accepted Position: <input type="text" Id="accept_position" name="accept_position"><br>
-        Accepted Election Date: <input type="date" Id="accept_electiondate" name="accept_electiondate"><br>
-        Deleted: <input type="checkbox" Id="isdeleted" name="isdeleted"><br>
-        Approval Homeowner ID: <input type="text" Id="approval_hoid" name="approval_hoid"><br>
-        Approval Position: <input type="text" Id="approval_position" name="approval_position"><br>
-        Approval Election Date: <input type = "date" Id="approval_electiondate" name="approval_electiondate"><br>
+        Accepted Homeowner ID:
+        <select name = "accepted_hoid">
+            <%
+
+                int status = A.getOfficerList();
+                for (int i = 0; i < A.accept_hoidList.si)
+
+
+
+            %>
+
+
+
+
+
+        </select>
+
+
+        Picture File<input type="text" Id="picturefile" name="picturefile"><br>
         <input type="submit" value="Submit">
     </form>
 </body>

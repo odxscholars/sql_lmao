@@ -17,26 +17,25 @@
     String v_donation_formfile = request.getParameter("donation_formfile");
     String v_date_donation = request.getParameter("date_donation");
     String v_accept_hoid = request.getParameter("accept_hoid");
-    String v_accept_position = request.getParameter("accept_position");
-    String v_accept_electiondate = request.getParameter("accept_electiondate");
-    String v_approval_hoid = request.getParameter("approval_hoid");
-    String v_approval_position = request.getParameter("approval_position");
-    String v_approval_electiondate = request.getParameter("approval_electiondate");
+    String v_address = request.getParameter("address");
+    String v_amount_donated = request.getParameter("amount_donated");
+    String v_picturefile = request.getParameter("picturefile");
 
     System.out.println(v_donor_completename);
     System.out.println(v_donation_formfile);
     System.out.println(v_date_donation);
     System.out.println(v_accept_hoid);
-    System.out.println(v_accept_position);
-    System.out.println(v_accept_electiondate);
-    System.out.println(v_approval_hoid);
-    System.out.println(v_approval_position);
-    System.out.println(v_approval_electiondate);
+    System.out.println(v_address);
+    System.out.println(v_amount_donated);
+    System.out.println(v_picturefile);
 
     A.donor_completename = v_donor_completename;
     A.donation_formfile = v_donation_formfile;
     A.date_donation = v_date_donation;
-    A.
+    A.accept_hoid = v_accept_hoid;
+    A.address = v_address;
+    A.amount_donated = v_amount_donated;
+    A.picturefile = v_picturefile;
 %>
 </body>
 </html>

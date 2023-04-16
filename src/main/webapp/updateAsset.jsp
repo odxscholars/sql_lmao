@@ -26,24 +26,36 @@
             } %>
             </option>
         </select><br>
-        Asset New HOA: <input type="text" Id="hoa_name" name="hoa_name"><br>
+        Asset New HOA: <select class = "inputClass" id = "hoa_name" name="hoa_name">
+        <%
+
+            status = A.getAssociatedHOA();
+            if (status == 1){
+                for(int i = 0; i < A.hoa_nameList.size(); i++){ %>
+        <option class = "inputClass"  value = "<%=A.hoa_nameList.get(i)%>"> <%=A.hoa_nameList.get(i)%>
+
+            <%}
+
+            } %>
+        </option>
+    </select><br>
         Asset New Name: <input type="text" Id="asset_name" name="asset_name"><br>
         Asset New Description: <input type="text" Id="asset_description" name="asset_description"><br>
         Acquisition Date: <input type="date" Id="acquisition_date" name="acquisition_date"><br>
         For Rent: <input type="checkbox" Id="for_rent" name="for_rent"><br>
         Asset Value: <input type="text" Id="asset_value" name="asset_value"><br>
         <label>Asset Type: </label><br>
-        <input type="radio" Id="P" name="type_asset" value="1">P<br>
-        <input type="radio" Id="E" name="type_asset" value="2">E<br>
-        <input type="radio" Id="F" name="type_asset" value="2">F<br>
-        <input type="radio" Id="O" name="type_asset" value="2">O<br>
+        <input type="radio" Id="P" name="type_asset" value="P">P<br>
+        <input type="radio" Id="E" name="type_asset" value="E">E<br>
+        <input type="radio" Id="F" name="type_asset" value="F">F<br>
+        <input type="radio" Id="O" name="type_asset" value="O">O<br>
 
         <label>Asset Status: </label><br>
-        <input type="radio" Id="A" name="status" value="1">W<br>
-        <input type="radio" Id="B" name="status" value="2">D<br>
-        <input type="radio" Id="C" name="status" value="2">P<br>
-        <input type="radio" Id="D" name="status" value="2">S<br>
-        <input type="radio" Id="E" name="status" value="2">X<br>
+        <input type="radio" Id="A" name="status" value="W">W<br>
+        <input type="radio" Id="B" name="status" value="D">D<br>
+        <input type="radio" Id="C" name="status" value="P">P<br>
+        <input type="radio" Id="D" name="status" value="S">S<br>
+
 
         Loc_lattitude: <input type="text" Id="loc_lattitude" name="loc_lattitude"><br>
         Loc_longitude: <input type="text" Id="loc_longitude" name="loc_longitude"><br>

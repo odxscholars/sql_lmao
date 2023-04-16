@@ -73,7 +73,7 @@ public class assets {
             stmt.close();
             con.close();
             return 1;
-                //prepare the statement
+            //prepare the statement
 
 
 
@@ -163,8 +163,8 @@ public class assets {
             System.out.println("Connected to the database!");
 
             PreparedStatement stmt = con.prepareStatement("UPDATE assets SET asset_id=?,asset_name=?,asset_description=?,acquisition_date=?," +
-                                                        "forrent=?,asset_value=?,type_asset=?,status=?,loc_lattitude=?,loc_longiture=?,hoa_name=?, " +
-                                                        "enclosing_asset=? WHERE asset_id=?");
+                    "forrent=?,asset_value=?,type_asset=?,status=?,loc_lattitude=?,loc_longiture=?,hoa_name=?, " +
+                    "enclosing_asset=? WHERE asset_id=?");
 
             stmt.setInt(1, asset_id);
             stmt.setString(2, asset_name);
@@ -195,7 +195,7 @@ public class assets {
     }
 
 
-        public int getDeletableAssets() {
+    public int getDeletableAssets() {
         try {
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoadb", "root", "12345678");
             PreparedStatement stmt = con.prepareStatement("SELECT asset_id, asset_name " +
