@@ -15,27 +15,33 @@
         <jsp:useBean id="A" class="donationManagement.donations" scope="session" />
         Donor Name: <input type="text" Id="donor_completename" name="donor_completename"><br>
         Donor Address: <input type="text" Id="address" name="address"><br>
-        Donation Form File: <input type="text" Id="donation_formfile" name="donation_formfile"><br>
+<%--        Donation Form File: <input type="text" Id="donation_formfile" name="donation_formfile"><br>--%>
         Donation Date: <input type="date" Id="date_donation" name="date_donation"><br>
         Accepted Homeowner ID:
-        <select name = "accepted_hoid">
+        <label>
+            <select name = "accepted_hoid">
+                <%
+
+                    int status = A.getOfficerList();
+                    for (int i = 0; i < A.accept_hoidList.size(); i++){ %>
+                        <option value = "<%=A.accept_hoidList.get(i)%>"><%=A.accept_hoidList.get(i)%></option>
+                <% } %>
+
+            </select>
+        </label>
+        <br>
+        Picture File<input type="text" Id="picturefile" name="picturefile"><br>
+        Asset To Be Donated: <select name = "donatedAsset">
             <%
 
-                int status = A.getOfficerList();
-                for (int i = 0; i < A.accept_hoidList.si)
+                status = A.listOfAssets();
+                for (int i = 0; i < A.asset_idList.size(); i++){ %>
+            <option value = "<%=A.asset_idList.get(i)%>"><%=A.asset_idList.get(i) + "-" + A.asset_nameList.get(i) %></option>
+            <% } %>
 
+        </select><br>
+        Amount Donated:<input type="text" Id="amount_donated" name="amount_donated"><br>
 
-
-            %>
-
-
-
-
-
-        </select>
-
-
-        Picture File<input type="text" Id="picturefile" name="picturefile"><br>
         <input type="submit" value="Submit">
     </form>
 </body>

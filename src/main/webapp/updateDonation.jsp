@@ -12,10 +12,28 @@
 </head>
 <body>
     <form action="update_donation_processing.jsp">
-        <jsp:useBean id="A" class="assetManagem.a" scope="session" />
+        <jsp:useBean id="d" class="donationManagement.donations" scope="session" />
         <select id="donation_id">
             <%
-                int status = A.getDonations();
+                int status = d.getDonations();
+                if (status == 1){
+                    for(int i = 0; i < d.donation_idList.size(); i++){
+                        %>
+                        <option value = "<%=d.donation_idList.get(i)%>"><%=d.donation_idList.get(i)
+                        %>
+                        <%
+                    }
+                }
+            %></option>
+        </select><br>
+        <select class="inputClass" id="donor_completename" >
+            <%
+                status = d.getAssociatedName();
+                if (status == 1){
+                    for (int i = 0; i < d.donor_completenameList.size(); i++){ %> 
+
+                    }
+                }
             %>
         </select>
     </form>

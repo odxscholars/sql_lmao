@@ -202,7 +202,8 @@ public class assets {
                     "FROM assets a WHERE " +
                     "asset_id NOT IN (SELECT DISTINCT asset_id FROM asset_transactions)" +
                     "AND asset_id NOT IN (SELECT DISTINCT asset_id FROM donated_assets)" +
-                    "AND a.forrent = 0");
+                    "AND a.forrent = 0 " +
+                    "AND asset_id NOT IN (SELECT DISTINCT asset_id FROM asset_rentals)");
             asset_idList.clear();
             asset_nameList.clear();
             ResultSet rst = stmt.executeQuery();
