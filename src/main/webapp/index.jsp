@@ -2,12 +2,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HOA Elections</title>
+    <title>Asset Management Application</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
+<br/> <a href="registerAsset.jsp">Register Asset</a> <br>
+<a href = "updateAsset.jsp">Update Asset</a> <br>
+<a href = "deleteAsset.jsp">Delete Wrong Asset</a> <br>
+<a href = "disposeAsset.jsp">Dispose an Asset</a><br>
+<a href = "recordDonation.jsp">Record Donation</a> <br>
+<a href = "updateDonationInfo.jsp">Update Donation Information</a><br>
+<a href = "deleteDonorInfo.jsp">Delete Donor Info</a> <br>
 </body>
 </html>
